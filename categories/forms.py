@@ -9,7 +9,7 @@ class CategoriesForm(ModelForm):
         fields = ['name', 'description']
         widgets = {
             'name': TextInput(attrs={'class': 'form-control'}),
-            'description': Textarea(attrs={'class': 'form-control', 'rows': 3}),
+            'description': Textarea(attrs={'class': 'form-control', 'rows': 5}),
         }
         labels = {
             'name': 'Category'
