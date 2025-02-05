@@ -1,6 +1,6 @@
 from django.contrib import admin
 from django.urls import path, include
-from .products_metrics.views import home
+from .metrics.views import home
 
 
 urlpatterns = [

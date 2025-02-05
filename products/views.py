@@ -1,3 +1,4 @@
+from core.metrics import stock_metrics
 from brands.models import Brand
 from categories.models import Category
 from django.urls import reverse_lazy
@@ -32,6 +33,7 @@ class ProductListView(ListView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
+        context['product_metrics'] = stock_metrics.get_product_metrics()
         context['categories'] = Category.objects.all()
         context['brands'] = Brand.objects.all()
         
